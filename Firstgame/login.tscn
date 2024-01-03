@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ckb8n621hkrcf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 40.0
+offset_top = 256.0
+offset_right = 441.0
+offset_bottom = 336.0
+theme_override_font_sizes/font_size = 40
+placeholder_text = "Nhập tên người chơi"
+expand_to_text_length = true
+
+[node name="namebutton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.283
+anchor_top = 0.622
+anchor_right = 0.75
+anchor_bottom = 0.711
+offset_left = 144.0
+offset_top = 384.0
+offset_right = 340.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Vào game"
