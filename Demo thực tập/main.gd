@@ -69,7 +69,7 @@ func _on_start_timer_timeout():
 
 func save_game():
 	var file = FileAccess.open(SAVEFILE, FileAccess.READ_WRITE)
-	file.seek_end()
+	file.seek_end() #move to the end of file
 	file.store_string(str(Score)+"\n")
 	file.store_string($HUD/Name.text + "\n")
 	file.close()
