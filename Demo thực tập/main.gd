@@ -3,7 +3,7 @@ extends Node
 @export var mob_scene: PackedScene
 var Score
 var high_score = 0
-const SAVEFILE = "user://savegame.txt"
+const SAVEFILE = "res://savegame.txt"
 
 func _ready():
 	load_game()
@@ -88,4 +88,3 @@ func load_game():
 		file.close()
 	else:
 		print("File not found")
-
