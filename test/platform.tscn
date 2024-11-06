@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8371pe6lotqt"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_y3bt1"]
+[ext_resource type="Texture2D" uid="uid://qqepl20wqa63" path="res://tilemap.png" id="2_nk0mo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u73xn"]
+size = Vector2(73, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iq5u8"]
+size = Vector2(1195, 131)
+
+[node name="Platform" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(293, 386)
+script = ExtResource("1_y3bt1")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_nk0mo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_u73xn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(11, 15)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -12.0
+offset_top = 462.0
+offset_right = 1155.0
+offset_bottom = 583.0
+color = Color(0.32156, 0.5673, 0.199227, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(568.5, 526.5)
+shape = SubResource("RectangleShape2D_iq5u8")

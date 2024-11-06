@@ -73,6 +73,8 @@ func save_game():
 	file.store_string(str(Score)+"\n")
 	file.store_string($HUD/Name.text + "\n")
 	file.close()
+	var array = [[],[]]
+	print(array)
 
 func load_game():
 	if FileAccess.file_exists(SAVEFILE):
